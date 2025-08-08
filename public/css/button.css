@@ -1,0 +1,17 @@
+.button_item {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 6px 6px;
+    width: 8%;
+    border-radius: 10px;
+    text-align: center;
+    float: left;
+    margin: 5px 5px;
+    background: #288ad6;
+}
+a {
+    text-decoration: none;
+    transition: .2s;
+    color: #288ad6;
+}

@@ -1,0 +1,29 @@
+.login_container{
+  /* justify-content: center; */
+  .login_area{
+    width: 30%;
+    
+    #login_form{
+      .form-group{
+        margin-bottom: 20px;
+      }
+      .form-group-btn-login{
+        text-align: center;
+      }
+      .form-group-link-create{
+        text-align: right;
+      }
+    }
+  }
+}
+.container_register{
+  width: 20%;
+  #cn_register{
+    .row{
+    .card-body{
+      text-align: center;
+    }
+  }
+  }
+  
+}

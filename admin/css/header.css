@@ -1,0 +1,13 @@
+header {
+  background: #563d7c;
+  height: 100%;
+  grid-area: header;
+  align-content: center;
+  justify-content: center;
+  border-radius: var(--main-radius);
+  /* position: sticky; */
+  top: 0%;
+    transition: margin-left .35s ease-in-out,left .35s ease-in-out,margin-right .35s ease-in-out,right .35s ease-in-out;
+
+}
+
