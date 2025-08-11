@@ -5,6 +5,7 @@
 section {
   max-width: 1249px;
   margin: 0 auto;
+  padding: 1rem;
 }
 .img {
   border: 1px solid #ddd;

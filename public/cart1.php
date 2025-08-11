@@ -4,15 +4,8 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shopping Cart</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
     <body>
+        <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
@@ -108,5 +101,7 @@
                         </div>
                     </div>
                 </div>
+        </section>
+     
             </body>
         </html>
