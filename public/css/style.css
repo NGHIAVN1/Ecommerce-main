@@ -2,7 +2,10 @@
   font-family: "antonio";
   src: url("../fonts/antonio-bold.ttf");
 }
-
+section {
+  max-width: 1249px;
+  margin: 0 auto;
+}
 .img {
   border: 1px solid #ddd;
   border-radius: 4px;

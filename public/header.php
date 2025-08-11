@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
       <!--font-family: 'Raleway', sans-serif;-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/button.css">
+
 </head>
 
 <body>
@@ -27,30 +28,30 @@ SESSION_START();
  $result = $conn -> query ($sql);
 ?>
 <!--nav start--->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <!-- As a link -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="index.php">Shunshine</a>
-</nav>
-  <div class="container">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.php">Trang chủ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="television1.php">Ti vi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="television1.php">Điện thoại</a>
-        </li>
-      </ul>
-      <form class="form-inline"  action="search(1).php" method="post">
+<header>   
+<nav>
+  <div class="logo">
+      <a href="">
+        Mylogo
+      </a>
+  </div>
+  <ul>
+    <li>
+      <a href="">Điện thoại</a>
+    </li>
+    <li>
+      <a href="">Tivi</a>
+    </li>
+    <li>
+            <form class="form-inline"  action="search(1).php" method="post">
         <!--<a href=""><img src="img/search.png"></a>-->
         <input class="form-control" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" name="name">
         <button class="btn btn-outline-dark" type="submit" style="margin-left:7px;margin-right:7px;"><img src="img/search.png"></button>
         </form>
-        <?php
+    </li>
+    <li>
+              <?php
           $total=0;
           if (mysqli_num_rows($result) > 0) {
             // output data of each row
@@ -59,7 +60,10 @@ SESSION_START();
             }
           }
               ?>
-        <a href="cart(1).php"><img src="img/cart.png"><?php echo $total?></a>
+                  <a href="cart.php"><img src="img/cart.png"><?php echo $total?></a>
+
+    </li>
+<li>
         <?php 
 
 if(isset($_SESSION['auth']))
@@ -77,10 +81,17 @@ else
 ?>
   <a class = "button_item" href="login.php">Đăng nhập</a>
   <a class = "button_item" href="Register.php">Đăng ký</a>
+  </li>
 <?php
 }
+
 ?>
-        
+       
+
+
+  </ul>
+</nav>
+</header>    
 
     </div>
   </div>

@@ -53,7 +53,7 @@ if(!isset($_SESSION['userid'])) {
 <head>
     <title>Trang chủ</title>
     <link href="css/boostrap.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>">
 <style>

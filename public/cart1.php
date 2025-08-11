@@ -1,3 +1,7 @@
+<?php
+ include'header.php';
+ include'lib/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -95,7 +99,7 @@
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                          <button class="btn btn-primary" type="button">Button</button>
+                                          <button class="btn btn-primary" type="button">Thanh toan</button>
 
                                     </div>
                                 </div>

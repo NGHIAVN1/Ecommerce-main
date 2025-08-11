@@ -1,0 +1,39 @@
+header {
+  background-color:#cb1c22 ;
+  position: sticky;
+}
+nav {
+  max-width:  1249px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 2rem;
+  margin: 0 auto;
+  align-items: end;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin: 0px;
+    padding: 0px;
+    align-items: flex-end;
+}
+
+li {
+
+}
+
+a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .logo {
+    width: 200px;
+}
+
