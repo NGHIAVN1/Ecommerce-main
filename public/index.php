@@ -93,70 +93,71 @@ if(!isset($_SESSION['userid'])) {
             </div>
         </div>
     </div>
+    <main>
+        <section>
+            <div class="container">
+                <div class="topsell-head">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <img src="img/mark.png">
+                            <h4>DAN HÀNG SẢN PHẨM</h4>
 
-    <section>
-        <div class="container">
-            <div class="topsell-head">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <img src="img/mark.png">
-                        <h4>DAN HÀNG SẢN PHẨM</h4>
+                        </div>
+
 
                     </div>
-
 
                 </div>
-
             </div>
-        </div>
-        <div class="grid-container">
-            <?php
-              if (mysqli_num_rows($result) > 0) {
-                // output data of each row
-                while($row = mysqli_fetch_assoc($result)) {
-                  ?>
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <div class="card-img-top">
-                    <div>
+            <div class="grid-container">
+                <?php
+                if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    while($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <div class="card-img-top">
+                        <div>
 
-                        <img src="admin/product_img/<?php echo $row['imgname']; ?>" style="width: 150px;">
+                            <img src="admin/product_img/<?php echo $row['imgname']; ?>" style="width: 150px;">
 
 
-                    </div>
-
-                    <div>
+                        </div>
 
                         <div>
 
-                            <h6><?php echo '<p><a href="Television_detail.php">'. $row["name"].'</a></p>'?></h6>
-                            <h6><?php echo '<p><a>'. $row["description"].'</a></p>'?></h6>
-                            <strong class="price"><?php echo $row["Price"] ?> VNĐ</strong>
-                            <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>">
-                            <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
-                            <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
-                            <input type="hidden" name="product_price" value="<?php echo $row['Price']; ?>">
-                        </div class="card-body">
-                        <input type="submit" class="btn btn btn-danger" value="Mua ngay" name="add_to_cart">
+                            <div>
+
+                                <h6><?php echo '<p><a href="Television_detail.php">'. $row["name"].'</a></p>'?></h6>
+                                <h6><?php echo '<p><a>'. $row["description"].'</a></p>'?></h6>
+                                <strong class="price"><?php echo $row["Price"] ?> VNĐ</strong>
+                                <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>">
+                                <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
+                                <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
+                                <input type="hidden" name="product_price" value="<?php echo $row['Price']; ?>">
+                            </div class="card-body">
+                            <input type="submit" class="btn btn btn-danger" value="Mua ngay" name="add_to_cart">
+                        </div>
+
                     </div>
-
-                </div>
-            </form>
-            <?php 
-        }
-            } 
-            else 
-                echo "0 results";
-            ?>
+                </form>
+                <?php 
+            }
+                } 
+                else 
+                    echo "0 results";
+                ?>
 
 
-        </div>
-        </div>
-    </section>
-
-</body>
-
+            </div>
+            </div>
+        </section>
+</main>
 <?php
  include'footer.php';
 ?>
+</body>
+
+
 
 </html>

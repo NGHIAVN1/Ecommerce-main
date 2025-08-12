@@ -1,31 +1,65 @@
-header {
+.nav-main {
+  font-family: '__Inter_e68c2d','__Inter_Fallback_e68c2d';
+  font-weight: 1rem;
   background-color:#cb1c22 ;
   position: sticky;
 }
-nav {
-  max-width:  1249px;
+.nav-menu {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+}
+.nav-menu .nav-items {
+  width: 1249px;
+  height: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  /* background-color: #cb1c22; */
+}
+ .nav-items ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items a {
+  color: #000000;
+  text-decoration: none;
+
+}
+
+
+nav {
+  max-width: 1249px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: end;
   padding: 2rem;
   margin: 0 auto;
   align-items: end;
+  gap: 3rem;
 }
 
 nav ul {
+    
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 1rem;
     margin: 0px;
     padding: 0px;
     align-items: flex-end;
 }
 
-li {
-
-}
 
 a {
     color: #fff;
@@ -33,7 +67,63 @@ a {
     text-decoration: none;
 }
 
-nav .logo {
-    width: 200px;
+/* nav .logo {
+    margin-right: auto;
+
+} */
+ .nav-end {
+    display: flex;
+    flex-direction: row ;    
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-left: auto;
+    padding: 0px;
+    align-items: flex-end;
+     /* margin-left:  auto;  */
+}
+.nav-1-item {
+  color: #fff;
+  background-color: #090d1466;
+  border-radius: 50%;
+  padding: 10px;
+}
+.nav-2-item {
+  color: #fff;
+  background-color: #090d14;
+  border-radius: 1.5rem;
+  padding: 15px;
+}
+nav li:first-child {
+  height: 100%;
+  color: #fff;
+  background-color: #090d1466;
+  border: 2px ;
+  border-radius: 1.5rem;
+  padding: 5px;
 }
 
+nav li:last-child {
+  width: 500px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 1.5rem;
+  padding: 5px;
+}
+
+ .logo img {
+  height: 40px;
+  width: 40px;
+
+}
+.logo a {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+.logo p {
+  font-family: 'Franklin Gothic Medium';
+  font-style: italic;
+  padding: 0px;
+  margin: 0px;
+}

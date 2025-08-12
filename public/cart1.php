@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <body>
-        <section>
+    <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-7">

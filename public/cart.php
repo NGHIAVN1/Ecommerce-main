@@ -17,14 +17,8 @@ else
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/cart.css">
-</head>
-
-<body>
-  <div class="container mt-5">
+<section>
+    <div class="container mt-5">
     <div class="card">
       <div class="card-body">
       <div class="row align-items-center">
@@ -49,6 +43,8 @@ else
       </div>
 </div>
 </div>
-</body>
+</section>
+
+
 
 </html>

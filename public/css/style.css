@@ -2,11 +2,21 @@
   font-family: "antonio";
   src: url("../fonts/antonio-bold.ttf");
 }
-section {
+footer {
+  background-color: #cb1c22;
+  color: #fff;
+}
+body {
+  background-color: #ffffff;
+  
+}
+main  {
   max-width: 1249px;
   margin: 0 auto;
   padding: 1rem;
+  background-color: #ffffff;
 }
+
 .img {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -44,7 +54,7 @@ section {
 
 /**banner start**/
 .banner {
-  background-color: #f2f2f2;
+  background-color: #92c5f5;
 }
 .bt1 {
   margin-top: 100px;
