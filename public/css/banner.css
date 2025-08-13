@@ -1,0 +1,19 @@
+.banner {
+    height: 370px;
+}
+
+.banner img {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.banner .d-flex {
+    max-width: 1280px;
+     margin: 0 auto;
+}
+.banner .cart-banner {
+    border: 2px solid #ccc;
+}
+.banner a::after {
+    
+}

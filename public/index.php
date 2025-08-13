@@ -53,7 +53,7 @@ if(!isset($_SESSION['userid'])) {
 <head>
     <title>Trang chủ</title>
     <link href="css/boostrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/banner.css" rel="stylesheet">
 </head>
 <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>">
 <style>
@@ -68,32 +68,116 @@ if(!isset($_SESSION['userid'])) {
 </style>
 
 <body>
-    <div class="banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
+    <main>
+        <div class="banner">
+            <div class="container">
 
-                    <div class="banner-text">
-                        <p class="bt1">Welcome To</p>
-                        <p class="bt2"><span class="bt3">Sunshine</span>Store</p>
-                        <p class="bt4">Chuyên cung cấp các mặt hàng điện tử, thiết bị điện tử chất lượng giá rẻ</p>
+                <!-- <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="banner-text">
+                            <p class="bt1">Welcome To</p>
+                            <p class="bt2"><span class="bt3">Sunshine</span>Store</p>
+                            <p class="bt4">Chuyên cung cấp các mặt hàng điện tử, thiết bị điện tử chất lượng giá rẻ</p>
+
+                        </div>
+
 
                     </div>
 
+                    <div class="col-md-6">
 
-                </div>
+                        <img src="https://tietkiemdiennang.net/wp-content/uploads/2020/08/thiet-bi-dien-tu-la-gi-1-2.jpg"
+                            class="img-fluid">
 
-                <div class="col-md-6">
-
-                    <img src="https://tietkiemdiennang.net/wp-content/uploads/2020/08/thiet-bi-dien-tu-la-gi-1-2.jpg"
-                        class="img-fluid">
-
-                </div>
+                    </div> -->
 
             </div>
         </div>
-    </div>
-    <main>
+        </div>
+        <div class="container" style="height: 130px; max-width:1280px;">
+            <div class="row">
+                <div class="col-md-3 ml-0">
+                    <div class="card p-3">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p>May Tinh</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="img/laptop_thumb_2_4df0fab60f.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p>Dien Thoai</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="img/phone_cate_c6a412f60a.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-3">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p>Tivi</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="img/may_tinh_bang_cate_thumb_00e3b3eefa.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mr-0">
+                    <div class="card p-3">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p>Tu lanh</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="img/tu_lanh_cate_thumb_77da11d0c4.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homepage-main">
+            <div class="container" id="home-page">
+
+                    <div class="row">
+                        <div>
+                            <p>may tinh noi bat</p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">m1</div>
+                            <div class="col-md-3">m2</div>
+                            <div class="col-md-3">m3</div>
+                            <div class="col-md-3">m4</div>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="container" id="home-page">
+
+            </div>
+            <div class="container" id="home-page">
+                <div class="card"></div>
+            </div>
+        </div>
+        <div class="container" id="home-page">
+            <div class="card"></div>
+        </div>
+        </div>
+        </div>
+
         <section>
             <div class="container">
                 <div class="topsell-head">
@@ -152,8 +236,8 @@ if(!isset($_SESSION['userid'])) {
             </div>
             </div>
         </section>
-</main>
-<?php
+    </main>
+    <?php
  include'footer.php';
 ?>
 </body>
