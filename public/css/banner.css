@@ -5,6 +5,7 @@
 .banner img {
     max-width: 1280px;
     margin: 0 auto;
+    z-index: -1;
 }
 
 .banner .d-flex {
@@ -14,6 +15,12 @@
 .banner .cart-banner {
     border: 2px solid #ccc;
 }
-.banner a::after {
-    
+.banner  .col-md-3 {
+    padding: 2px;
 }
+.banner #button-center {
+    top: -200px;
+    right: 20px;
+    z-index: 1;
+}
+

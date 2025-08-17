@@ -1,0 +1,59 @@
+.menu-bar {
+    display: none;
+    position: fixed;
+    top: calc(100% - 96%);
+    width: 100%;
+    margin: 20px auto;
+    z-index: 3;
+}
+.menu-bar:hover {
+    display: block;
+}
+
+.col-md-8 ul{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+}
+.col-md-3:first-child > li:hover{
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.col-md-6 {
+    display: flex;
+    border-right: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+
+}
+.col-md-3:first-child li {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+li p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 600;
+}
+li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.col-md-3:first-child  li:first-child {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.col-md-6 #laptop,#fridge,#tv,#tablet {
+    display: none;
+}

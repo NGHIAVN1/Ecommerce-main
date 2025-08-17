@@ -1,15 +1,20 @@
+@import url('style.css');
+@import url('menu-bar.css');
 .nav-main {
   font-family: Roboto;
   font-weight: 1rem;
   background-color:#cb1c22 ;
   position: sticky;
 }
+
 .nav-menu {
+  position: static;
   height: 30px;
   border-bottom: 1px solid #ccc;
   background-color: #ffffff;
   padding: 16px 0px 40px;
 }
+
 .nav-menu .nav-items {
   width: 1280px;
   height: 100%;
@@ -77,6 +82,7 @@ a {
 
 } */
  .nav-end {
+   
     display: flex;
     flex-direction: row ;    
     justify-content: flex-end;
@@ -86,6 +92,7 @@ a {
     align-items: flex-end;
      /* margin-left:  auto;  */
 }
+
 .nav-1-item {
   color: #fff;
   background-color: #090d1466;
@@ -129,6 +136,24 @@ nav li:first-child {
   border-radius: 1.5rem;
   padding: 10px 16px;
 }
+li:first-child:hover {
+  background-color: #090d14;
+  color: #fff;
+}
+
+:has(li:first-child:hover)   .menu-bar, menu-bar:hover,header:has(.nav-main:hover) {
+  display: block;
+}
+:has(li:first-child:hover)  .focus {
+  display: block;
+}
+/* :has( header li:first-child:hover)  main {
+  display: block;
+  position: fixed;
+  
+  overflow: auto;
+  z-index: 1;
+} */
 
 nav li:last-child {
   width: 500px;

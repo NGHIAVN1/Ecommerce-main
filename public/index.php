@@ -1,5 +1,5 @@
 <?php
- include'header.php';
+
  include'./lib/connection.php';
 
  $sql = "SELECT * FROM product";
@@ -54,6 +54,7 @@ if(!isset($_SESSION['userid'])) {
     <title>Trang chủ</title>
     <link href="css/boostrap.css" rel="stylesheet">
     <link href="css/banner.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>">
 <style>
@@ -68,9 +69,19 @@ if(!isset($_SESSION['userid'])) {
 </style>
 
 <body>
+    <?php include("header.php") ?>
+    <?php include("menu.php") ?>
+    <div class="focus"></div>
     <main>
         <div class="banner">
             <div class="container">
+                <a href="">
+                    <img src="img/banner/desk_header_SS_ef90395150.webp" alt="">
+                    <div class=" d-grid gap-2 d-md-flex justify-content-md-between" id="button-center">
+                        <button class="btn btn-primary" type="button"><</button>
+                        <button class="btn btn-primary" type="button">></button>
+                    </div>
+                </a>
 
                 <!-- <div class="row">
                     <div class="col-md-6">
@@ -98,8 +109,8 @@ if(!isset($_SESSION['userid'])) {
         <div class="container" style="height: 130px; max-width:1280px;">
             <div class="row">
                 <div class="col-md-3 ml-0">
-                    <div class="card p-3">
-                        <div class="row">
+                    <div class="card bd-1 p-3">
+                        <div class="row justify-content-center">
                             <div class="col-md-5">
                                 <p>May Tinh</p>
                             </div>
@@ -110,8 +121,8 @@ if(!isset($_SESSION['userid'])) {
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card p-3">
-                        <div class="row">
+                    <div class="card bd-1 p-3">
+                        <div class="row justify-content-center">
                             <div class="col-md-5">
                                 <p>Dien Thoai</p>
                             </div>
@@ -122,8 +133,8 @@ if(!isset($_SESSION['userid'])) {
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card p-3">
-                        <div class="row">
+                    <div class="card  bd-1 p-3">
+                        <div class="row justify-content-center">
                             <div class="col-md-5">
                                 <p>Tivi</p>
                             </div>
@@ -134,8 +145,8 @@ if(!isset($_SESSION['userid'])) {
                     </div>
                 </div>
                 <div class="col-md-3 mr-0">
-                    <div class="card p-3">
-                        <div class="row">
+                    <div class="card bd-1 p-3">
+                        <div class="row justify-content-center">
                             <div class="col-md-5">
                                 <p>Tu lanh</p>
                             </div>
@@ -149,21 +160,64 @@ if(!isset($_SESSION['userid'])) {
         </div>
         <div class="homepage-main">
             <div class="container" id="home-page">
-
+                <div class="row">
+                    <div>
+                        <p>may tinh noi bat</p>
+                    </div>
+                </div>
+                <div class="container">
                     <div class="row">
-                        <div>
-                            <p>may tinh noi bat</p>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card’s content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <p>ssfds</p>
+                            <!-- <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card’s content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card’s content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card’s content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3">m1</div>
-                            <div class="col-md-3">m2</div>
-                            <div class="col-md-3">m3</div>
-                            <div class="col-md-3">m4</div>
-                        </div>
-                    </div>
-
+                </div>
+                <div class=" d-grid gap-2 d-md-flex justify-content-md-between" id="button-center">
+                    <button class="btn btn-primary" type="button"><</button>
+                            <button class="btn btn-primary" type="button">></button>
+                </div>
             </div>
             <div class="container" id="home-page">
 
@@ -177,68 +231,8 @@ if(!isset($_SESSION['userid'])) {
         </div>
         </div>
         </div>
-
-        <section>
-            <div class="container">
-                <div class="topsell-head">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <img src="img/mark.png">
-                            <h4>DAN HÀNG SẢN PHẨM</h4>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-            </div>
-            <div class="grid-container">
-                <?php
-                if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                    <div class="card-img-top">
-                        <div>
-
-                            <img src="admin/product_img/<?php echo $row['imgname']; ?>" style="width: 150px;">
-
-
-                        </div>
-
-                        <div>
-
-                            <div>
-
-                                <h6><?php echo '<p><a href="Television_detail.php">'. $row["name"].'</a></p>'?></h6>
-                                <h6><?php echo '<p><a>'. $row["description"].'</a></p>'?></h6>
-                                <strong class="price"><?php echo $row["Price"] ?> VNĐ</strong>
-                                <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>">
-                                <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
-                                <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
-                                <input type="hidden" name="product_price" value="<?php echo $row['Price']; ?>">
-                            </div class="card-body">
-                            <input type="submit" class="btn btn btn-danger" value="Mua ngay" name="add_to_cart">
-                        </div>
-
-                    </div>
-                </form>
-                <?php 
-            }
-                } 
-                else 
-                    echo "0 results";
-                ?>
-
-
-            </div>
-            </div>
-        </section>
     </main>
-    <?php
- include'footer.php';
+    <?php include('footer.php'); ?>
 ?>
 </body>
 

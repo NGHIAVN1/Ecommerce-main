@@ -70,12 +70,9 @@ SESSION_START();
 
                         </div>
                         <!--<a href=""><img src="img/search.png"></a>-->
-
-
-
-
                     </li>
                 </ul>
+                
                 <div class="nav-end">
                     <div class="nav-1-item col-md-3">
                         <div class="row d-flex">
@@ -114,6 +111,7 @@ SESSION_START();
 
                     </div>
                 </div>
+                
             </nav>
         </div>
         <div class="nav-menu">
@@ -166,5 +164,6 @@ SESSION_START();
 
         </div>
         </div>
+
     </header>
     <!--nav end--->
