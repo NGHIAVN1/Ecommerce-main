@@ -1,3 +1,4 @@
-﻿# Ecommerce with PHP no framework
+﻿# Ecommerce project without PHP framework
  
+
 
