@@ -12,16 +12,16 @@
     <!--font-family: 'Raleway', sans-serif;-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
 
 </head>
     <!--header start--->
     <!--header end--->
     <?php 
  include "lib/connection.php";
-SESSION_START();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
   $id = $_SESSION['userid']?? "";
  $sql = "SELECT * FROM cart where userid='$id'";
  $result = $conn -> query ($sql);
@@ -36,7 +36,7 @@ SESSION_START();
                                 <img src="img/my-logo.webp">
                             </div>
                             <div class="col-md-8 p-0">
-                                <p>FOXY<span style="color: #3cfd3cff">.COM</span>
+                                <p>FOXY<span style="color: #038503ff">.COM</span>
                                 <p>
 
                             </div>
@@ -61,15 +61,17 @@ SESSION_START();
                         </div>
                     </li>
                     <li>
-                        <div class="d-flex justify-content-between">
-
-                            <input class="form-control my-0 mx-3 border-0" type="text" placeholder="Tim kiem san pham"
+                        <div  class="d-flex justify-content-between">
+                            <input   class="form-control my-0 mx-3 border-0" type="text" placeholder="Tim kiem san pham"
                                 aria-label=".form-control example">
                             <button class="btn btn-outline-dark p-0 m-0 border-0" type="submit"
                                 style="margin-left:7px;margin-right:7px;"><img src="img/search.png"></button>
-
                         </div>
+                       
                         <!--<a href=""><img src="img/search.png"></a>-->
+                         <div class="result-find">
+                            <p>Kết quả tìm kiếm</p>
+                         </div>
                     </li>
                 </ul>
                 
@@ -84,8 +86,9 @@ SESSION_START();
                         </div>
                     </div>
                     <div class="nav-2-item col-md-9 ">
-                        <div class="row ">
-                            <div class="col-md-4 justify-content-center" style="padding: 0px">
+                        <a href="cart.php">
+                            <div class="row ">
+                            <div class="col-md-4" style="padding: 0px">
                                 <span >
                                     <?php
                                     $total=0;
@@ -108,6 +111,8 @@ SESSION_START();
                                 <p py-0 my-0>Gio hang</p>
                             </div>
                         </div>
+                        </a>
+                        
 
                     </div>
                 </div>
@@ -164,6 +169,7 @@ SESSION_START();
 
         </div>
         </div>
+                    <script src="js/search-expan.js"></script>
 
     </header>
     <!--nav end--->

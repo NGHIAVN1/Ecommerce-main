@@ -1,0 +1,51 @@
+.list-banner {
+    width: 100%;
+    max-width: 1280px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.list-banner .grid-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.grid-container .item {
+    position: relative;
+    width: calc(1200px / 2);
+    height: 200px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    display: none; /* Hide all items by default */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover; /* This ensures images cover the area without stretching */
+    display: block; /* Remove any extra space below image */
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translate3d(-3140px, 0px, 0px);
+    transition-delay: 0ms;
+}
+  to {
+    transform: translate3d(-1884px, 0px, 0px);
+    transition-delay: 0ms;
+    opacity: 2;
+  }
+}

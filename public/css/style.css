@@ -2,19 +2,21 @@
   font-family: "antonio";
   src: url("../fonts/antonio-bold.ttf");
 }
+@import url('./banner.css');
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
   width: 100%;
 }
-
+.homepage-main h3 {
+  margin: 0;
+  padding: 10px;
+}
 footer {
   background-color: #191919;
   color: #ffff;
 }
-header:hover {
-  background-color: #000;
-}
+
 body {  
 }
 .focus {
@@ -28,20 +30,42 @@ body {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   z-index: 2;
 }
+
 main  {
   position: static;
-  background-image: url(../img/theme/desk_header_bg_9d225eba01.webp); 
-  background-repeat: no-repeat;
-  background-color: #e9ecef;
-  height: 80%;
+  min-height: 100vh;
   top: 149.77px;
   bottom: 0%;
   width: 100%;
-  gap: 2.5rem;
+  row-gap: 2.5rem;
   z-index: 1;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  font-style: normal;
+  background-color: #f8f9fa;
 }
 main .card {
   border-radius: 1rem;
+}
+
+.theme-dark {
+  width: 100%;
+  overflow: hidden;
+  background-image: url(../img/theme/desk_header_bg_a43ac514b7.webp); 
+  background-position:  center center;
+  min-height: 100vh;
+background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #e9ecef;
+}.theme-light {
+  width: 100%;
+  background-image: url(../img/theme/desk_header_bg_9d225eba01.webp); 
+  background-repeat: no-repeat;
+  background-color: #e9ecef;
+  overflow: auto;
+  background-position:  center center;
+  min-height: 100vh;
+  background-size: cover;
 }
 
 main .col-md-3 {
@@ -62,7 +86,8 @@ header {
   gap: 1rem;
 }
 
-.homepage-main  #home-page {
+ #home-page-1, #home-page-2, #home-page-3 {
+  width: 100%;
   max-width: 1280px;
   height: 320px;
   background-color: #ffff;
@@ -88,22 +113,82 @@ header {
   border-radius: 0.5rem;
 }
 
+
+
 :has(+ .homepage-main > #button-center) {
   background-color: #cb1c22;
 }
-
-.homepage-main #button-center {
-  position: relative;
-  top: -150px;
-  left: 0px;
+.items:has(.card)  img {
+  width: 96px;
+  height: 96px;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-#button-center button {
-  border-radius: 50%;
+
+
+.col-md-5 > p {
+  font-size: 14px;
+  font-weight: bold;
 }
+
+
+
+#home-page-1 .my-btn,
+#home-page-2 .my-btn,
+#home-page-3 .my-btn {
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Show buttons on container hover */
+#home-page-1:hover .my-btn,
+#home-page-2:hover .my-btn,
+#home-page-3:hover .my-btn {
+    display: flex;
+    opacity: 1;
+}
+
+/* Alternative: Show buttons on card hover within containers */
+.homepage-main:has(.card:hover) .my-btn {
+    display: flex;
+}
+.my-btn > span {
+    width: 50px;
+    height: 50px;
+    background-color: #ffff;
+    border-radius: 50%;
+    border: none;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.my-btn > span:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.my-btn > span svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* .card:hover button {
   top: 2px;
 } */
+
 .img {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -371,9 +456,6 @@ p {
 }
 
 /***subs end***/
-
-.footer p {
-}
 .footer1 {
   margin-top: 35px;
   margin-bottom: 42px;

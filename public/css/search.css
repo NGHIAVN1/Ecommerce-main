@@ -1,0 +1,170 @@
+/* Search Container */
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Search Input */
+#searchInput {
+    border-radius: 25px !important;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+/* Search Results Container */
+.result-find {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    margin-top: 5px;
+}
+
+/* Show search results when active */
+.result-find.show {
+    display: block;
+    animation: fadeInDown 0.3s ease;
+}
+
+/* Individual Search Result Item */
+.search-item {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.search-item:last-child {
+    border-bottom: none;
+}
+
+.search-item:hover {
+    background-color: #f8f9fa;
+}
+
+.search-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.search-item-info {
+    flex: 1;
+}
+
+.search-item-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.search-item-price {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.search-item-description {
+    color: #666;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* No Results Message */
+.no-results {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Loading State */
+.search-loading {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+
+/* Animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Recent Searches or Popular Items */
+.search-section {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.search-section-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.popular-item {
+    padding: 8px 0;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.popular-item:hover {
+    color: #333;
+}
+
+/* Search Button */
+.search-container button {
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .result-find {
+        left: -15px;
+        right: -15px;
+        max-height: 300px;
+    }
+    
+    .search-item {
+        padding: 10px;
+    }
+    
+    .search-item img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+}

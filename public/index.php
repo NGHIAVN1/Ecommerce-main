@@ -52,8 +52,7 @@ if(!isset($_SESSION['userid'])) {
 
 <head>
     <title>Trang chủ</title>
-    <link href="css/boostrap.css" rel="stylesheet">
-    <link href="css/banner.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <input type="hidden" name="user_id" value="<?php echo $_SESSION['userid'];?>">
@@ -72,41 +71,10 @@ if(!isset($_SESSION['userid'])) {
     <?php include("header.php") ?>
     <?php include("menu.php") ?>
     <div class="focus"></div>
-    <main>
-        <div class="banner">
-            <div class="container">
-                <a href="">
-                    <img src="img/banner/desk_header_SS_ef90395150.webp" alt="">
-                    <div class=" d-grid gap-2 d-md-flex justify-content-md-between" id="button-center">
-                        <button class="btn btn-primary" type="button"><</button>
-                        <button class="btn btn-primary" type="button">></button>
-                    </div>
-                </a>
-
-                <!-- <div class="row">
-                    <div class="col-md-6">
-
-                        <div class="banner-text">
-                            <p class="bt1">Welcome To</p>
-                            <p class="bt2"><span class="bt3">Sunshine</span>Store</p>
-                            <p class="bt4">Chuyên cung cấp các mặt hàng điện tử, thiết bị điện tử chất lượng giá rẻ</p>
-
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <img src="https://tietkiemdiennang.net/wp-content/uploads/2020/08/thiet-bi-dien-tu-la-gi-1-2.jpg"
-                            class="img-fluid">
-
-                    </div> -->
-
-            </div>
-        </div>
-        </div>
-        <div class="container" style="height: 130px; max-width:1280px;">
+    <main class="theme-dark">
+        <?php include("banner.php") ?>
+        <?php include("list-banner.php") ?>
+        <div class="container" style="height: 130px; max-width:1280px; margin-top: 20px; ;">
             <div class="row">
                 <div class="col-md-3 ml-0">
                     <div class="card bd-1 p-3">
@@ -159,17 +127,15 @@ if(!isset($_SESSION['userid'])) {
             </div>
         </div>
         <div class="homepage-main">
-            <div class="container" id="home-page">
-                <div class="row">
-                    <div>
-                        <p>may tinh noi bat</p>
-                    </div>
+            <div class="container position-relative" id="home-page-1">
+                <div class="d-flex flex-row align-items-center">
+                    <img src="img/flame.gif" alt="" style="width: 50px; height: 30px;">
+                    <h3>Điện thoại nổi bật</h3>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
                             <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
@@ -203,7 +169,6 @@ if(!isset($_SESSION['userid'])) {
                         </div>
                         <div class="col-md-3">
                             <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Some quick example text to build on the card title and make up
@@ -214,28 +179,36 @@ if(!isset($_SESSION['userid'])) {
                         </div>
                     </div>
                 </div>
-                <div class=" d-grid gap-2 d-md-flex justify-content-md-between" id="button-center">
-                    <button class="btn btn-primary" type="button"><</button>
-                            <button class="btn btn-primary" type="button">></button>
+                   <div class="my-btn" id="button-center">
+                <span class="btn-1" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M201.4 297.4C188.9 309.9 188.9 330.2 201.4 342.7L361.4 502.7C373.9 515.2 394.2 515.2 406.7 502.7C419.2 490.2 419.2 469.9 406.7 457.4L269.3 320L406.6 182.6C419.1 170.1 419.1 149.8 406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3L201.3 297.3z"/></svg></span>
+                <span class="btn-2" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg></span>
+        </div>
+            </div>
+            <div class="container position-relative" id="home-page-2">
+                <div class="d-flex flex-row align-items-center">
+                    <img src="img/flame.gif" alt="" style="width: 50px; height: 30px;">
+                    <h3>Máy tính nổi bật</h3>
                 </div>
+            <div class="my-btn" id="button-center">
+                <span class="btn-1" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M201.4 297.4C188.9 309.9 188.9 330.2 201.4 342.7L361.4 502.7C373.9 515.2 394.2 515.2 406.7 502.7C419.2 490.2 419.2 469.9 406.7 457.4L269.3 320L406.6 182.6C419.1 170.1 419.1 149.8 406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3L201.3 297.3z"/></svg></span>
+                <span class="btn-2" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg></span>
+        </div>
             </div>
-            <div class="container" id="home-page">
+            <div class="container position-relative" id="home-page-3">
+                <div class="d-flex flex-row align-items-center">
+                    <img src="img/flame.gif" alt="" style="width: 50px; height: 30px;">
+                    <h3>Tivi nổi bật</h3>
+                </div>
+                <div class="my-btn" id="button-center">
+                <span class="btn-1" onclick="plusSlides(-1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M201.4 297.4C188.9 309.9 188.9 330.2 201.4 342.7L361.4 502.7C373.9 515.2 394.2 515.2 406.7 502.7C419.2 490.2 419.2 469.9 406.7 457.4L269.3 320L406.6 182.6C419.1 170.1 419.1 149.8 406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3L201.3 297.3z"/></svg></span>
+                <span class="btn-2" onclick="plusSlides(1)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg></span>
+        </div>
+            </div>
+        </div>
 
-            </div>
-            <div class="container" id="home-page">
-                <div class="card"></div>
-            </div>
         </div>
-        <div class="container" id="home-page">
-            <div class="card"></div>
-        </div>
-        </div>
-        </div>
+         </div>
     </main>
     <?php include('footer.php'); ?>
-?>
 </body>
-
-
-
 </html>

@@ -1,12 +1,13 @@
 <?php 
-
-SESSION_START();
+include 'header.php';
+// Session is already started in header.php, no need to start it again
 
 if(isset($_SESSION['auth']))
 {
     if($_SESSION['auth']==1)
     {
         header("location:index.php");
+        exit();
     }
 }
 

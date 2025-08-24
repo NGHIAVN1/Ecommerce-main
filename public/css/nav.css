@@ -8,10 +8,11 @@
 }
 
 .nav-menu {
-  position: static;
+  position: relative;
   height: 30px;
   border-bottom: 1px solid #ccc;
   background-color: #ffffff;
+  z-index: -1;
   padding: 16px 0px 40px;
 }
 
@@ -114,6 +115,9 @@ a {
   padding: 0px;
   margin: 0px;
 }
+.nav-2-item  svg {
+  right: -10px;
+}
 .nav-2-item  span::after {
    content: counter(value);
    align-items: center;
@@ -156,6 +160,8 @@ li:first-child:hover {
 } */
 
 nav li:last-child {
+  display: flex;
+  flex-direction: column;
   width: 500px;
   background-color: #ffffff;
   border-radius: 1.5rem;
@@ -183,3 +189,16 @@ nav li:last-child {
 .relative {
   position: relative !important;
 }
+li:last-child:focus-within  .result-find  {
+  display: flex;
+  position: absolute;
+  border-radius: 1rem;
+  padding: 10px;
+  justify-content: start;
+  width: 500px;
+  height: 230px;
+  background: white;
+  z-index: 4 !important;
+  top: 70px;
+}
+
